@@ -1,9 +1,11 @@
 <template>
   <div>
     <h1>ABOUT ME</h1>
-    <h3>Name: {{ user.name }}</h3>
-    <h3>Surname: {{ user.surname }}</h3>
-    <h3>Code: {{ user.code }}</h3>
+    <div class="user-info">
+      <h3>Name: <span class="label"> {{ user.name }}</span></h3>
+      <h3>Surname: <span class="label">{{ user.surname }}</span> </h3>
+      <h3>Code: <span class="label"> {{ user.code }}</span></h3>
+    </div>
   </div>
 </template>
 
@@ -21,3 +23,8 @@ export default {
 };
 </script>
 
+<style scoped>
+h1, .label {
+  color: white; 
+}
+</style>
