@@ -13,7 +13,6 @@
   </div>
 </template>
 
-
 <script>
 export default {
   data() {
@@ -94,9 +93,23 @@ export default {
 }
 
 .user-info {
+  display: flex;
+  align-items: center;
   margin-right: 10px;
-  border-right: 1px solid white; 
-  padding-left: 10px;
+  position: relative;
+  border-right: 1px solid white; /* Add border between user's name and logout button */
   padding-right: 10px;
+
+}
+
+.user-info::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: #023467;
 }
 </style>
